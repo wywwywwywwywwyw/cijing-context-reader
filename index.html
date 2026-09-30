@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>词境 · 读懂它，在这句话里的意思</title>
+  <meta name="description" content="词境是一款 Chrome / Edge 英文阅读插件。结合上下文解释熟词生义、提示疑似拼写错误，自动保存原句，让查过的词成为可复习的记忆。">
+  <meta name="theme-color" content="#153e33">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23153e33'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='38' fill='%23d8efb2'%3E境%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="site-header"><div class="nav-shell">
+  <a class="brand" href="#"><span class="brand-mark">境</span><span>词境<small>CONTEXT READER</small></span></a>
+  <nav aria-label="页面导航"><a href="#experience">体验释义</a><a href="#features">为什么词境</a><a href="#review">原句复习</a></nav>
+  <a class="nav-download" href="#download">下载插件 <span>v0.2</span></a>
+</div></header>
+<main id="main">
+<section class="hero section-shell" id="experience">
+  <div class="hero-copy"><p class="eyebrow"><span class="tiny-rule"></span> 为认真读英文的人而做</p>
+    <h1>读懂它，<br>在<span class="highlight-text">这句话</span>里的意思。</h1>
+    <p class="hero-description">选中一个词，读懂它在当前语境中的含义。<br>让每次查词，留下一段能复习的记忆。</p>
+    <div class="hero-actions"><a class="button primary" href="#download">把词境加进浏览器</a><a class="text-link" href="#features">看看它能帮你什么</a></div>
+    <p class="compatibility"><span class="browser-symbol">◉</span> Chrome / Edge <span class="divider">/</span> 使用你自己的 DeepSeek Key</p>
+  </div>
+  <div class="demo-stage">
+    <div class="stage-top"><span>一个词，放回它的语境。</span><span class="stage-index">01 — 03</span></div>
+    <div class="reading-window">
+      <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>阅读中的某一刻</span><span class="window-aa">Aa</span></div>
+      <div class="reading-content"><p class="reading-category" id="demo-category">RESEARCH & IDEAS</p>
+        <p class="english-sentence" id="demo-sentence">The findings <button class="selected-word" id="selected-word">challenge</button> the assumption that higher spending necessarily translates into better outcomes.</p>
+        <p class="reading-instruction">点击高亮词，看看它在这里的意思</p>
+      </div>
+      <article class="definition" id="definition" aria-live="polite">
+        <div class="definition-head"><span>词境 / IN CONTEXT</span><span class="context-tag">语境释义</span></div>
+        <div class="word-heading"><h2 id="demo-word">challenge</h2><span id="demo-pos">动词</span></div>
+        <p class="definition-meaning" id="demo-meaning">对……提出质疑</p>
+        <p class="definition-reason" id="demo-reason">这里的宾语是 assumption（假设），表示研究发现对原有假设提出质疑。</p>
+        <div class="translation"><span>本句意思</span><p id="demo-translation">这些发现质疑了“投入越多，结果就一定越好”这一假设。</p></div>
+        <div class="definition-foot"><span>原词 · 原句 · 当前义项</span><span class="check-label">一起留在语境本</span></div>
+      </article>
+    </div>
+    <div class="demo-selector" role="group" aria-label="选择释义示例"><button class="active" data-example="meaning" aria-pressed="true">01 熟词生义</button><button data-example="phrase" aria-pressed="false">02 词组搭配</button><button data-example="spelling" aria-pressed="false">03 拼写纠错</button></div>
+    <p class="demo-disclosure">交互示例 · 预设释义，不调用 AI</p>
+  </div>
+</section>
+<div class="promise-strip"><div class="section-shell"><span>选中就解释<span class="strip-plus">＋</span></span><span>看上下文，也看懂用法<span class="strip-plus">＋</span></span><span>自动保存，带着原句复习</span></div></div>
+<section class="features section-shell section-space" id="features">
+  <div class="understand-heading"><p class="eyebrow">01 / UNDERSTAND</p><h2>一个词的答案，<br>藏在<span>前后文</span>里。</h2><p>比如 address。读到这段话，你会怎么理解？</p></div>
+  <div class="context-story"><div class="story-top"><span>一段关于城市治理的阅读</span><span>ADDRESS / 动词</span></div><article class="context-passage" aria-label="address 的阅读语境"><p>Public concern over <span data-clue="before" class="clue active">water quality had been rising</span> for months.</p><p>In response, the council moved to <mark>address</mark> <span data-clue="collocation" class="clue">the issue</span> <span data-clue="purpose" class="clue">before approving further construction</span>.</p></article><div class="story-interpretation"><span class="meaning-overline">这里的 address</span><strong>着手处理；设法解决</strong><span>一个熟悉的词，在当前句子里的具体意思。</span></div>
+    <div class="clue-controls" role="group" aria-label="探索 address 的语境线索"><button data-clue-button="before" class="active" aria-pressed="true"><span>01</span> 先看前文</button><button data-clue-button="collocation" aria-pressed="false"><span>02</span> 再看搭配</button><button data-clue-button="purpose" aria-pressed="false"><span>03</span> 读懂整句</button></div><div class="clue-explanation" aria-live="polite"><span id="clue-label">前文告诉了我们什么？</span><p id="clue-text">公众对水质的担忧已经持续数月。接下来的 In response（作为回应），说明市议会要采取行动。</p></div><p class="story-disclosure">点击上方三个步骤，查看语境线索 · 预设解析示例</p>
+  </div>
+  <div class="spelling-ribbon"><div class="spelling-comparison"><span>lastest</span><strong>latest</strong><small>最新的</small></div><div><h3>拼写有误，理解也不用停下来。</h3><p>结合语境发现疑似误拼，给出纠正建议，再说明正确词义。</p><button id="show-spelling" class="text-link">体验拼写纠错示例</button></div></div>
+  <div class="feature-note"><span class="note-icon">↔</span><p><strong>阅读节奏，也照顾到了。</strong>释义卡片优先避开当前段落；拖动顶部，就能放到你觉得舒服的位置。相同语境再次查询，优先使用已保存释义。</p></div>
+</section>
+<section class="review-section" id="review"><div class="section-shell review-layout">
+  <div class="review-copy"><p class="eyebrow">02 / REMEMBER</p><h2>记住它，<br>连同你读过的<br><em>那句话。</em></h2><p>先回忆，再揭晓。<br>记不牢的词，用颜色帮你留意；<br>想起来了，就把标记轻轻放下。</p><div class="review-legend"><span><i class="yellow"></i>未记住 1 次</span><span><i class="orange"></i>2 次</span><span><i class="red"></i>3 次及以上</span></div><p class="review-detail">未记住，10 分钟后再练。<br>记住后，逐步拉长复习间隔。</p></div>
+  <div class="review-example"><div class="review-example-top"><span>我的语境本</span><span>试一试复习的感觉</span></div>
+    <article class="recall-card" id="recall-card" data-level="0"><div class="recall-meta"><span>阅读中遇见的表达</span><span id="recall-badge">待回忆</span></div><h3>bear fruit</h3><div class="recall-context"><span>回到当时的前后文</span><p>After years of prototypes and failed trials, the team finally secured its first commercial contract.</p></div><blockquote>The company’s investment in research is beginning to <mark>bear fruit</mark>.</blockquote><div class="recall-answer" id="recall-answer" hidden><span class="answer-label">当前义项</span><strong>取得成果；开始见效</strong><div class="recall-reason"><span class="answer-label">为什么在这里这样理解</span><p>前文提到经历多年试验后，团队终于拿到首份商业合同。这说明研发投入开始获得回报，因此 bear fruit 在这里表示“取得成果”。</p></div><span class="answer-label">本句意思</span><p>公司在研发上的投入开始见效。</p><p class="recall-pattern">记住搭配：efforts / investment + bear fruit</p></div><div class="recall-prompt" id="recall-prompt">联系前文，这里的 bear fruit 是什么意思？</div><button class="button recall-reveal" id="recall-reveal">揭晓释义与语境解析</button><div class="recall-actions" id="recall-actions" hidden><button class="button" id="forgot">还没记住</button><button class="button" id="remembered">想起来了</button></div></article>
+    <p class="recall-feedback" id="recall-feedback" aria-live="polite">先在心里想一想，再揭晓答案。</p><p class="review-demo-label">交互演示 · 可反复点击体验，不保存复习记录</p>
+  </div>
+</div></section>
+<section class="section-shell section-space actual-section" id="in-use"><div class="section-heading"><div><p class="eyebrow">03 / IN THE WILD</p><h2>就在你正在读的网页里。</h2></div><p>下面是词境的实际使用截图。<br>遇到困惑，选中它就好。</p></div>
+  <div class="screenshots"><figure><button class="screenshot-open shot-context" data-image="assets/context-in-use.png" data-caption="实际使用：解释技术语境中的 Build" aria-label="放大查看 Build 语境释义截图"><img src="assets/context-in-use.png" alt="词境在英文技术网页中将 Build 解释为构建产品、体验或工作流，并说明其语境用法" loading="lazy" width="1386" height="1346"><span class="zoom-label">查看原图</span></button><figcaption><span>语境理解</span><h3>Build 在这里，是构建产品与体验。</h3><p>从当前网页出发，讲清楚这个词为什么这样用。</p></figcaption></figure><figure><button class="screenshot-open shot-spelling" data-image="assets/spelling-in-use.png" data-caption="实际使用：识别 Lastest，建议正确拼写 Latest" aria-label="放大查看 Lastest 拼写纠错截图"><img src="assets/spelling-in-use.png" alt="词境提示 Lastest 疑似拼写错误，应为 Latest，并解释为最新的" loading="lazy" width="668" height="922"><span class="zoom-label">查看原图</span></button><figcaption><span>拼写纠错提示</span><h3>多了一个 s，也没有错过意思。</h3><p>结合上下文发现疑似误拼，并给出正确拼写建议。</p></figcaption></figure></div>
+  <p class="actual-note">截图展示一次实际 AI 输出，其他语境的结果可能不同。词境为独立工具，与截图中的网站无隶属关系。</p>
+</section>
+<section class="download-section" id="download"><div class="section-shell download-layout"><div class="download-copy"><p class="eyebrow">START READING</p><h2>下一篇英文，<br>带上词境。</h2><p>在你自己的阅读里，<br>积累属于你的语境本。</p><a class="button primary download-button" href="assets/context-reader-v0.2.zip" download="词境阅读插件-v0.2.zip">下载 v0.2 安装包</a><p class="download-meta">Chrome / Edge · 本地加载版<br>需要自备 DeepSeek API Key，调用费用由你的账户承担</p></div><ol class="install-steps"><li><span class="step-number">01</span><div><h3>解压，加载插件。</h3><p>打开浏览器扩展管理页，开启“开发人员模式”，选择“加载解压缩的扩展”，选中含 manifest.json 的文件夹。</p><div class="browser-copy"><button data-copy="edge://extensions">复制 Edge 管理页地址</button><button data-copy="chrome://extensions">复制 Chrome 管理页地址</button></div><p id="copy-status" class="copy-status" role="status"></p></div></li><li><span class="step-number">02</span><div><h3>连接你的 DeepSeek。</h3><p>在插件设置中填入 API Key，保存并测试连接。密钥填写在插件里，无需提交到此网页。</p></div></li><li><span class="step-number">03</span><div><h3>打开英文网页，开始选词。</h3><p>点击词境图标，启用当前网页。选中单词或短语，释义成功后会自动存入语境本。</p></div></li></ol></div></section>
+<section class="section-shell faq-section"><div><p class="eyebrow">GOOD TO KNOW</p><h2>开始之前，<br>你可能想知道。</h2></div><div class="faq-list"><details><summary>“自动纠错”会修改原网页吗？</summary><p>不会。词境通过 AI 分析所选词与上下文，可能识别出疑似拼写错误，并在释义中给出纠正建议。它不会改写原网页，也不能保证发现所有错误；遇到专有名词时尤其需要结合原文判断。</p></details><details><summary>词库和阅读内容会存在哪里？</summary><p>词库、原文链接和 API Key 保存在本机扩展存储中。实时查询时，所选词、原句及附近少量正文会发送给 DeepSeek，网页标题与网址不随查询发送。语境本支持导出备份，目前没有跨设备同步。</p></details><details><summary>支持哪些阅读场景？</summary><p>支持 Chrome / Edge 中的普通英文网页正文，选词范围为单词或最多六个词的短语。目前不支持浏览器内置 PDF 阅读器、扫描图片、浏览器设置页和其他桌面软件，部分嵌入式阅读器可能受网站限制。</p></details><details><summary>已经安装旧版，要怎样更新？</summary><p>先导出词库备份，再把新版文件覆盖到原插件文件夹。在扩展管理页重新加载现有“词境”，刷新阅读网页和语境本即可。保留原安装目录，不要卸载重装，以便继续使用原有词库和设置。</p></details></div></section>
+</main>
+<footer class="site-footer section-shell"><a class="brand" href="#"><span class="brand-mark">境</span><span>词境<small>CONTEXT READER</small></span></a><p>在语境中读懂，在原句中记住。</p><span>独立阅读工具 · v0.2</span></footer>
+<dialog id="image-dialog" aria-labelledby="image-caption"><button id="image-close" aria-label="关闭图片">×</button><p id="image-caption"></p><img id="large-image" alt=""></dialog>
+<script src="app.js" defer></script>
+</body></html>
